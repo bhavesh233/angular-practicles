@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <label>First-name</label>
+    <input type="text" class="form-control" #firstName/>
+    <label>Last-name</label>
+    <input type="text" class="form-control" #lastName/>
+    <label>Country</label>
+    <input type="text" class="form-control" #country/>
+    <br />
+    <button class="btn btn-primary" (click)="onSubmit(firstName,lastName,country)">Submit</button>
+  </div>
+</div>

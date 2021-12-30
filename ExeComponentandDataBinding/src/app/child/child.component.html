@@ -1,0 +1,11 @@
+<div *ngFor="let item of changeColor">
+  <h1
+    [ngStyle]="{ 'background-color': 'green' }"
+    *ngIf="item == 'white'; else elseBlock"
+  >
+    change colour is {{ item }}
+  </h1>
+  <ng-template #elseBlock
+    ><h1 [ngStyle]="{ color: item }">change colour is {{ item }}</h1>
+  </ng-template>
+</div>
