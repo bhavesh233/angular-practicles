@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Basic": {
+    "DirectiveDeepDrive": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Basic",
+            "outputPath": "dist/DirectiveDeepDrive",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,6 @@
               "src/assets"
             ],
             "styles": [
-             
               "src/styles.css"
             ],
             "scripts": []
@@ -66,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "DirectiveDeepDrive:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Basic:build:production"
+              "browserTarget": "DirectiveDeepDrive:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "DirectiveDeepDrive:build"
           }
         },
         "test": {
@@ -114,19 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Basic:serve"
+            "devServerTarget": "DirectiveDeepDrive:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Basic:serve:production"
+              "devServerTarget": "DirectiveDeepDrive:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Basic",
+  "defaultProject": "DirectiveDeepDrive",
   "cli": {
-    "analytics": "edf1a4c2-5cf5-4732-b473-d7becc1b2144"
+    "analytics": "58c5a419-b7f8-49f5-9132-2cce6776b276"
   }
 }

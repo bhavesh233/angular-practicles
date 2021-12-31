@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Basic": {
+    "ExeServiceAndDependency": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Basic",
+            "outputPath": "dist/ExeServiceAndDependency",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-             
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "ExeServiceAndDependency:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Basic:build:production"
+              "browserTarget": "ExeServiceAndDependency:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "ExeServiceAndDependency:build"
           }
         },
         "test": {
@@ -114,19 +114,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Basic:serve"
+            "devServerTarget": "ExeServiceAndDependency:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Basic:serve:production"
+              "devServerTarget": "ExeServiceAndDependency:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Basic",
+  "defaultProject": "ExeServiceAndDependency",
   "cli": {
-    "analytics": "edf1a4c2-5cf5-4732-b473-d7becc1b2144"
+    "analytics": "7fe40c2e-3466-4ed3-811e-17b52e7bd90d"
   }
 }

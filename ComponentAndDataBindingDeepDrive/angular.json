@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Basic": {
+    "ComponentAndDataBindingDeepDrive": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Basic",
+            "outputPath": "dist/ComponentAndDataBindingDeepDrive",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-             
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "ComponentAndDataBindingDeepDrive:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Basic:build:production"
+              "browserTarget": "ComponentAndDataBindingDeepDrive:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "ComponentAndDataBindingDeepDrive:build"
           }
         },
         "test": {
@@ -114,19 +114,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Basic:serve"
+            "devServerTarget": "ComponentAndDataBindingDeepDrive:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Basic:serve:production"
+              "devServerTarget": "ComponentAndDataBindingDeepDrive:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Basic",
+  "defaultProject": "ComponentAndDataBindingDeepDrive",
   "cli": {
-    "analytics": "edf1a4c2-5cf5-4732-b473-d7becc1b2144"
+    "analytics": "86771964-4792-45f3-87b5-c9e41b79bf08"
   }
 }

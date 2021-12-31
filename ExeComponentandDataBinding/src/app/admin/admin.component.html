@@ -1,0 +1,8 @@
+<app-user (userData)="adminMethod($event)"></app-user>
+
+<div *ngFor="let item of userArray">
+  FirstName : {{ item.firstName }} <br />
+  LastName : {{ item.lastName }} <br />
+  Country : {{ item.country }} 
+  <br><br>
+</div>

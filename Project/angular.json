@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Basic": {
+    "Project": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Basic",
+            "outputPath": "dist/Project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-             
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -51,13 +47,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -66,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "Project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Basic:build:production"
+              "browserTarget": "Project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Basic:build"
+            "browserTarget": "Project:build"
           }
         },
         "test": {
@@ -114,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Basic:serve"
+            "devServerTarget": "Project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Basic:serve:production"
+              "devServerTarget": "Project:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Basic",
+  "defaultProject": "Project",
   "cli": {
-    "analytics": "edf1a4c2-5cf5-4732-b473-d7becc1b2144"
+    "analytics": "cc9deb61-b2ce-43f0-b204-42d047994620"
   }
 }
