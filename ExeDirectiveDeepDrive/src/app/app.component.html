@@ -1,0 +1,6 @@
+<div *ngFor="let item of colorArray">
+  <p appCustom [directiveColor]="item.color" [directiveText]="item.text" >
+    color : {{ item.color }} <br />
+    text : {{ item.text }}
+  </p>
+</div>

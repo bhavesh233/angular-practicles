@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">College</th>
+      <th scope="col">Login-time</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let student of studentsArray">
+    <tr>
+      <td>{{ student.name }}</td>
+      <td>{{ student.college }}</td>
+      <td>{{ student.loginTime }}</td>
+    </tr>
+  </tbody>
+</table>
