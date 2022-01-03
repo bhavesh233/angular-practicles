@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-5"></div>
+
+  <div class="col-xs-7">
+    <label>Id</label>
+    <input type="text" class="form-control" #id />
+    <label>Title</label>
+    <input type="text" class="form-control" #title />
+    <label>Company</label>
+    <input type="text" class="form-control" #company />
+    <label>Place</label>
+    <input type="text" class="form-control" #place />
+    <br />
+    <button
+      class="btn btn-primary"
+      (click)="onPostCreated(id.value, title.value, company.value, place.value)"
+    >
+      Post
+    </button>
+  </div>
+</div>
