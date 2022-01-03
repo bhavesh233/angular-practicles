@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-7">
+    <table class="table align-right">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Company</th>
+          <th scope="col">Place</th>
+          <th scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of jobDetails">
+        <tr>
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.title }}</td>
+          <td>{{ item.company }}</td>
+          <td>{{ item.place }}</td>
+          <td>{{ item.time }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="onEdit()">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
