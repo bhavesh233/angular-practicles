@@ -1,7 +1,7 @@
 <div class="row" *ngFor="let dataItem of dataList">
   <div class="col-md-5">
     <a
-      (click)="onClick(dataItem)"><li>{{ dataItem.title }}</li></a
+      (click)="onClick(dataItem.id)"><li>{{ dataItem.title }}</li></a
     >
   </div>
 </div>

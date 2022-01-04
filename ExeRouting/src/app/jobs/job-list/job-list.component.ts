@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { JobData } from '../job.module';
 import { PostJobService } from '../post-job.service';
@@ -10,6 +11,7 @@ import { PostJobService } from '../post-job.service';
 })
 export class JobListComponent implements OnInit {
   dataList: JobData[] = [];
+  
 
   @Input()
   data!: {
@@ -19,15 +21,13 @@ export class JobListComponent implements OnInit {
     place: string;
     time: Date;
   };
-  constructor(private postJobService: PostJobService) {}
+  constructor(private postJobService: PostJobService, private router: Router) {}
 
   ngOnInit() {
     this.dataList = this.postJobService.postData;
     console.log(this.dataList);
   }
-  onClick(object:Object) {
-    // console.log(object);
-    this.postJobService.postDetailsShow.emit(object);
-
+  onClick(id: string) {
+    this.router.navigate(['/jobs', id]);
   }
 }

@@ -13,9 +13,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    this.loginService.onSubmit()
-
+  onSubmit(userName:string,password:string){
+    this.loginService.onSubmit(userName,password);
   }
 
 }
