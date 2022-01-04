@@ -1,27 +1,14 @@
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Injectable()
 export class LoginService {
-  jobData: {
-    id: number;
-    title: string;
-    company: string;
-    place: string;
-    time: Date;
-  }[] = [];
-
-  onSubmit() {}
-
-  addPost(
-    id: string,
-    title: string,
-    company: string,
-    place: string,
-    time: Date
-  ) {
-    this.jobData.push({
-      id: +id,
-      title: title,
-      company: company,
-      place: place,
-      time: time,
-    });
+  constructor(private router: Router) {}
+  onSubmit(userName: string, password: string) {
+    if (userName && password) {
+      this.router.navigate(['/jobs']);
+    } else {
+      alert('please fill data');
+    }
   }
 }

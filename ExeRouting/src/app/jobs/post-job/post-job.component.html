@@ -3,13 +3,28 @@
 
   <div class="col-xs-7">
     <label>Id</label>
-    <input type="text" class="form-control" #id />
+    <input type="text" class="form-control" [(ngModel)]="jobDetail.id" #id />
     <label>Title</label>
-    <input type="text" class="form-control" #title />
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="jobDetail.title"
+      #title
+    />
     <label>Company</label>
-    <input type="text" class="form-control" #company />
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="jobDetail.company"
+      #company
+    />
     <label>Place</label>
-    <input type="text" class="form-control" #place />
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="jobDetail.place"
+      #place
+    />
     <br />
     <button
       class="btn btn-primary"
